@@ -1,0 +1,12 @@
+[target.x86_64-unknown-linux-gnu]
+rustflags = [
+    "-L", "/home/alex/.local/lib",
+    "-C", "link-arg=-Wl,-rpath,/home/alex/.local/lib",
+    "-C", "link-arg=-lopencv_imgcodecs",
+    "-C", "link-arg=-lopencv_imgproc",
+    "-C", "link-arg=-lopencv_core",
+]
+
+[env]
+PKG_CONFIG_PATH = "/home/alex/.local/lib/pkgconfig"
+LIBCLANG_PATH = "/usr/lib/x86_64-linux-gnu"
